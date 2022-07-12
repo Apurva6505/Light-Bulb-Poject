@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <ul id="element">
+      <li class="list-item">First Element</li>
+      <li class="list-item">Second Element</li>
+      <li class="list-item">Third Element</li>
+    </ul>
+
+    <div class="allDivs">First div</div>
+    <script>
+        const allDivs = document.getElementsByClassName("allDivs")
+        console.log(allDivs)
+    </script>
+    <div class="allDivs">Second div</div>
+
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table>
+    <script>
+    //   //how to access root node
+    //   console.log(document.documentElement);
+    //   console.log(document.body); // body
+
+    //   console.log(document.head); //head
+
+    //   console.log(document.body.childNodes); //child nodes
+
+    // //   console.log(document.body.children); //only actual elements...no text and comments..not to use as an array
+    //   for(node of document.body.children){
+    //       console.log(node);
+    //   }
+
+    //   console.log(document.body.firstChild); //first child of body...text
+
+    //   console.log(document.body.firstElementChild); //first child of body....ul
+
+    //   console.log(document.body.lastChild); //last child of body...script
+
+    //   console.log(document.body.lastElementChild); //last child of body....script
+
+    // const childrensOfBody = Array.from(document.body.children)
+    // console.log(childrensOfBody)
+
+    //Siblings
+    // const ulTag = document.body.children[0]  //ul
+    // console.log(ulTag.nextSibling); //text
+    // console.log(ulTag.nextElementSibling); //li
+    // const firstLi = ulTag.children[0];
+    // const secondLi = ulTag.children[1];
+    // console.log(secondLi.previousElementSibling.textContent);
+
+    //Table DOM Manipulation
+    // const tableTag = document.body.children[1];
+    // console.log(tableTag.tBodies[0].rows.cells[0].textContent);//One
+    // console.log(tableTag.tBodies[0].rows.cells[0].style = "background-color:red;");
+
+    //ID Search
+    //element.style.background = "red"
+
+    // const ulTag = document.getElementById("element");
+    // ulTag.style.backgroundColor = "red";
+    
+
+    //class search
+    // listItem = document.getElementsByClassName("list-item")
+
+
+    // console.log(listItem)
+    // console.log(document.getElementsByTagName("table"))
+
+    //query selector
+    //  listItems = document.querySelector(".list-item");//..used in ID's
+    // console.log(listItems)
+   
+    // const listItems = document.querySelectorAll(".list-item");//..all elements will be selected
+    // console.log(listItems)
+    // console.log(allDivs)
+
+
+   
+
+    </script>
+  </body>
+</html>
